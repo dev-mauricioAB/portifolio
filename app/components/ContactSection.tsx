@@ -127,6 +127,21 @@ export default function ContactSection() {
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                 </svg>
               </motion.a>
+              <motion.a
+                href="https://medium.com/@dev-mauricioalexandre"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                target="_blank"
+                className="group flex items-center justify-center p-4 bg-gradient-to-r from-purple-500/10 to-purple-500/20 rounded-xl hover:from-purple-500/20 hover:to-purple-500/30 border border-purple-500/20 hover:border-purple-500/30 transition-all duration-300"
+              >
+                <svg
+                  className="w-6 h-6 text-purple-400 group-hover:text-purple-300 transition-colors"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M2.01 6.545a.486.486 0 0 0-.155-.4L.112 3.738v-.593h6.228l4.806 10.527 4.224-10.527h5.98v.593l-1.526 1.457a.356.356 0 0 0-.136.342v12.254a.356.356 0 0 0 .136.342l1.49 1.457v.593h-8.538v-.593l1.548-1.505c.152-.152.152-.197.152-.342V7.915l-4.296 11.064h-.582L4.44 7.915v7.98a.783.783 0 0 0 .217.672l2.012 2.437v.593H.054v-.593l2.012-2.437a.756.756 0 0 0 .201-.672V6.545z" />
+                </svg>
+              </motion.a>
             </div>
           </div>
         </motion.div>
