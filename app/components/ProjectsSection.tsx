@@ -50,7 +50,7 @@ const projects = [
     title: "Backend & Cloud Functions",
     description:
       "Experience with .NET backend APIs and event-driven Azure Functions for scalable solutions.",
-    image: "/images/backend.png",
+    image: "/images/backend.jpg",
     tags: ["C#", ".NET", "Azure Functions", "REST APIs", "Serverless"],
   },
   {
