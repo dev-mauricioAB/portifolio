@@ -3,12 +3,35 @@
 import { motion } from 'framer-motion';
 
 const skills = [
-	{ skill: 'React/Next.js', level: 95 },
-	{ skill: 'TypeScript', level: 90 },
-	{ skill: 'UI/UX Design', level: 85 },
-	{ skill: 'CSS/Sass/Tailwind', level: 95 },
-	{ skill: 'JavaScript', level: 90 },
-	{ skill: 'Responsive Design', level: 95 },
+  // Frontend Core
+  { skill: "React / Next.js", level: 95 },
+  { skill: "TypeScript", level: 90 },
+  { skill: "JavaScript (ES6+)", level: 90 },
+  { skill: "Tailwind CSS / Sass", level: 95 },
+  { skill: "Responsive Design", level: 95 },
+  { skill: "UI/UX Design & Prototyping", level: 85 },
+
+  // Forms & State Management
+  { skill: "React Hook Form / Zod", level: 90 },
+  { skill: "TanStack Table / Query", level: 85 },
+
+  // Data Visualization
+  { skill: "ECharts / Chart.js / SciChart", level: 90 },
+
+  // Backend
+  { skill: "C# / .NET", level: 80 },
+  { skill: "Azure Functions / REST APIs", level: 80 },
+
+  // DevOps
+  { skill: "Kubernetes / Docker", level: 85 },
+  { skill: "CI/CD (GitHub Actions / Azure DevOps)", level: 80 },
+
+  // CMS / No-code
+  { skill: "WordPress / Wix", level: 75 },
+
+  // AI / Emerging Skills
+  { skill: "OpenAI / LangChain (AI Agents)", level: 30 },
+  { skill: "Azure AI Assistant / Copilot / LLMs", level: 70 },
 ];
 
 export default function SkillsSection() {
