@@ -1,26 +1,29 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { useScopedI18n } from "@/locales/client";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function HeroSection() {
-	return (
+  const scopedT = useScopedI18n("hero");
+
+  return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-10" />
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
       </div>
 
-			<div className="relative z-10 text-center px-4">
-			<div className="mb-6 sm:mb-8">
-        <Image
-          src="/images/portrait.png"
-          alt="Profile Picture"
-          width={150}
-          height={150}
-          className="rounded-full mx-auto border-2 border-gray-50 shadow-lg"
-        />
-      </div>
+      <div className="relative z-10 text-center px-4">
+        <div className="mb-6 sm:mb-8">
+          <Image
+            src="/images/portrait.png"
+            alt="Profile Picture"
+            width={150}
+            height={150}
+            className="rounded-full mx-auto border-2 border-gray-50 shadow-lg"
+          />
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -30,7 +33,7 @@ export default function HeroSection() {
             Mauricio Alexandre Barroso
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Full Stack Developer, Frontend Specialist, and DevOps Enthusiast
+            {scopedT("subtitle")}
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <span className="px-4 py-2 bg-blue-500/10 rounded-full border border-blue-500/20">

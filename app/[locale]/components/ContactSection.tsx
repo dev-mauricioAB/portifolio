@@ -1,9 +1,12 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { useScopedI18n } from "@/locales/client";
+import { motion } from "framer-motion";
 
 export default function ContactSection() {
-	return (
+  const scopedT = useScopedI18n("contact");
+
+  return (
     <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <motion.div
@@ -22,11 +25,10 @@ export default function ContactSection() {
               transition={{ delay: 0.2 }}
             >
               <h2 className="text-4xl font-bold mb-3 text-center bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
-                Let&apos;s Connect
+                {scopedT("title")}
               </h2>
               <p className="text-gray-400 text-center mb-4">
-                Ready to collaborate or have a project in mind? Let&apos;s make
-                something amazing together.
+                {scopedT("subtitle")}
               </p>
               <div className="flex items-center justify-center gap-2 text-gray-400 mb-8">
                 <svg
@@ -71,7 +73,7 @@ export default function ContactSection() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                Get in Touch
+                {scopedT("buttonLabels.email")}
               </motion.a>
               <motion.a
                 href="/Profile.pdf"
@@ -93,7 +95,9 @@ export default function ContactSection() {
                     d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                   />
                 </svg>
-                <span className="font-medium text-gray-400">View Resume</span>
+                <span className="font-medium text-gray-400">
+                  {scopedT("buttonLabels.resume")}
+                </span>
               </motion.a>
             </div>
             <div className="flex flex-wrap justify-center gap-6">
