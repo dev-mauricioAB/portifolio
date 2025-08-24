@@ -30,9 +30,9 @@ export default function LocaleSwitcher({ currentLocale }: Props) {
           <Image
             src={`/flags/${locale}.svg`}
             alt={locale}
-            width={28}
-            height={28}
-            className="rounded-sm h-auto w-auto"
+            width={0}
+            height={0}
+            className="rounded-sm size-6"
           />
         </Link>
       ))}
