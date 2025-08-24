@@ -32,7 +32,7 @@ export default function LocaleSwitcher({ currentLocale }: Props) {
             alt={locale}
             width={28}
             height={28}
-            className="rounded-sm"
+            className="rounded-sm h-auto w-auto"
           />
         </Link>
       ))}
