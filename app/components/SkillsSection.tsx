@@ -9,29 +9,23 @@ const skills = [
   { skill: "JavaScript (ES6+)", level: 90 },
   { skill: "Tailwind CSS / Sass", level: 95 },
   { skill: "Responsive Design", level: 95 },
-  { skill: "UI/UX Design & Prototyping", level: 85 },
-
+  { skill: "UI/UX Design & Prototyping", level: 58 },
   // Forms & State Management
   { skill: "React Hook Form / Zod", level: 90 },
   { skill: "TanStack Table / Query", level: 85 },
-
   // Data Visualization
   { skill: "ECharts / Chart.js / SciChart", level: 90 },
-
   // Backend
-  { skill: "C# / .NET", level: 80 },
-  { skill: "Azure Functions / REST APIs", level: 80 },
-
+  { skill: "C# / .NET", level: 75 },
+  { skill: "Azure Functions / REST APIs", level: 75 },
   // DevOps
   { skill: "Kubernetes / Docker", level: 85 },
   { skill: "CI/CD (GitHub Actions / Azure DevOps)", level: 80 },
-
   // CMS / No-code
   { skill: "WordPress / Wix", level: 75 },
-
   // AI / Emerging Skills
   { skill: "OpenAI / LangChain (AI Agents)", level: 30 },
-  { skill: "Azure AI Assistant / Copilot / LLMs", level: 70 },
+  { skill: "Azure AI Assistant / Copilot / LLMs", level: 30 },
 ];
 
 export default function SkillsSection() {
