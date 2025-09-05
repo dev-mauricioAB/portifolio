@@ -1,3 +1,5 @@
+import { TranslationEntity } from "../models";
+
 export default {
   'hero': { 'subtitle': 'Desenvolvedor Full Stack, Especialista em Frontend e Entusiasta de DevOps', },
   "projects": {
@@ -14,6 +16,8 @@ export default {
         "description": "Soluções robustas de formulários para autenticação de usuários, edição de produtos e configurações complexas do sistema.",
         image: "/images/form.png",
         tags: ["React", "React Hook Form", "Zod", "Tailwind CSS"],
+        path: "/forms",
+        disabled: true,
       },
       {
         "title": "Aplicações Web Mobile-First",
@@ -82,4 +86,4 @@ export default {
   'hello': 'Ola',
   'hello.world': 'Ola Mundo!',
   'welcome': 'Ola {name}!'
-} as const
+} as const as TranslationEntity;

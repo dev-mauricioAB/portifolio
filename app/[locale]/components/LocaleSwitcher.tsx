@@ -33,6 +33,7 @@ export default function LocaleSwitcher({ currentLocale }: Props) {
             width={0}
             height={0}
             className="rounded-sm size-6"
+            priority={true}
           />
         </Link>
       ))}

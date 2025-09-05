@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ReactElement } from "react";
 import { Locale } from "@/locales/models";
+import LocaleSwitcher from "./components/LocaleSwitcher";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://portifolio-ecru-theta.vercel.app/"), // 👈 change to your production domain
-  title: "Mauricio Alexandre Barroso - Frontend Developer",
+  title: "Maurício Alexandre Barroso - Frontend Developer",
   description:
     "Welcome to my portfolio! I am a passionate frontend developer specializing in creating beautiful, responsive, and user-centric web applications. With expertise in modern JavaScript frameworks and UI/UX principles, I transform designs into seamless interactive experiences.",
   keywords: [
@@ -34,22 +35,22 @@ export const metadata: Metadata = {
     "Performance Optimization",
     "Web Accessibility",
     "Component Design",
-    "Mauricio Alexandre Barroso",
+    "Maurício Alexandre Barroso",
   ],
-  authors: [{ name: "Mauricio Alexandre Barroso" }],
-  creator: "Mauricio Alexandre Barroso",
+  authors: [{ name: "Maurício Alexandre Barroso" }],
+  creator: "Maurício Alexandre Barroso",
   openGraph: {
-    title: "Mauricio Alexandre Barroso - Frontend Developer Portfolio",
+    title: "Maurício Alexandre Barroso - Frontend Developer Portfolio",
     description:
       "Passionate frontend developer crafting beautiful and interactive web experiences. Explore my projects and frontend development expertise.",
     url: "https://your-domain.com",
-    siteName: "Mauricio Alexandre Barroso - Portfolio",
+    siteName: "Maurício Alexandre Barroso - Portfolio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mauricio Alexandre Barroso - Frontend Developer Portfolio",
+        alt: "Maurício Alexandre Barroso - Frontend Developer Portfolio",
       },
     ],
     locale: "en_US",
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mauricio Alexandre Barroso - Frontend Developer",
+    title: "Maurício Alexandre Barroso - Frontend Developer",
     description:
       "Passionate frontend developer crafting beautiful and interactive web experiences. Explore my projects and frontend development expertise.",
     creator: "@yourusername",
@@ -90,6 +91,9 @@ export default async function LocaleLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav className="p-4 fixed z-10">
+          <LocaleSwitcher currentLocale={locale} />
+        </nav>
         {children}
       </body>
     </html>
