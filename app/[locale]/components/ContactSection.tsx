@@ -76,7 +76,7 @@ export default function ContactSection() {
                 {scopedT("buttonLabels.email")}
               </motion.a>
               <motion.a
-                href="/Profile.pdf"
+                href={scopedT("filePath")}
                 target="_blank"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

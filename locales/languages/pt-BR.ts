@@ -76,6 +76,7 @@ export default {
   "contact": {
     "title": "Vamos Conectar",
     "subtitle": "Pronto para colaborar ou tem um projeto em mente? Vamos criar algo incrível juntos.",
+    "filePath": "Profile_PTBR.pdf",
     "buttonLabels": {
       "email": "Entrar em Contato",
       "resume": "Ver Currículo"

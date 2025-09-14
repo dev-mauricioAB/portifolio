@@ -35,6 +35,7 @@ export type TranslationEntity = {
   contact: {
     title: string;
     subtitle: string;
+    filePath: string;
     buttonLabels: {
       email: string;
       resume: string;

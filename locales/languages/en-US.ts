@@ -74,8 +74,9 @@ export default {
     }
   },
   "contact": {
-    "title": "Let&apos;s Connect",
-    "subtitle": "Ready to collaborate or have a project in mind? Let&apos;s make something amazing together.",
+    "title": "Let's Connect",
+    "subtitle": "Ready to collaborate or have a project in mind? Let's make something amazing together.",
+    "filePath": "Profile_EN.pdf",
     "buttonLabels": {
       "email": "Get in Touch",
       "resume": "View Resume"
