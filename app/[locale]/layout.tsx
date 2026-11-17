@@ -1,101 +1,28 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { ReactElement } from "react";
-import { Locale } from "@/locales/models";
-import LocaleSwitcher from "./components/LocaleSwitcher";
+import type { Metadata } from "next"
+import { Bebas_Neue, Space_Grotesk } from "next/font/google"
+import { notFound } from "next/navigation"
+import { LOCALES, type Locale } from "@/locales/models"
+import "./globals.css"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const display = Bebas_Neue({ subsets: ["latin"], weight: "400", variable: "--font-display" })
+const body = Space_Grotesk({ subsets: ["latin"], variable: "--font-body" })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portifolio-ecru-theta.vercel.app/"), // 👈 change to your production domain
-  title: "Maurício Alexandre Barroso - Frontend Developer",
-  description:
-    "Welcome to my portfolio! I am a passionate frontend developer specializing in creating beautiful, responsive, and user-centric web applications. With expertise in modern JavaScript frameworks and UI/UX principles, I transform designs into seamless interactive experiences.",
-  keywords: [
-    "Frontend Developer",
-    "Web Developer",
-    "React Developer",
-    "Next.js",
-    "TypeScript",
-    "JavaScript",
-    "UI/UX",
-    "Responsive Design",
-    "Web Animation",
-    "Modern Web Development",
-    "CSS Expert",
-    "Performance Optimization",
-    "Web Accessibility",
-    "Component Design",
-    "Maurício Alexandre Barroso",
-  ],
-  authors: [{ name: "Maurício Alexandre Barroso" }],
-  creator: "Maurício Alexandre Barroso",
-  openGraph: {
-    title: "Maurício Alexandre Barroso - Frontend Developer Portfolio",
-    description:
-      "Passionate frontend developer crafting beautiful and interactive web experiences. Explore my projects and frontend development expertise.",
-    url: "https://your-domain.com",
-    siteName: "Maurício Alexandre Barroso - Portfolio",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Maurício Alexandre Barroso - Frontend Developer Portfolio",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Maurício Alexandre Barroso - Frontend Developer",
-    description:
-      "Passionate frontend developer crafting beautiful and interactive web experiences. Explore my projects and frontend development expertise.",
-    creator: "@yourusername",
-    images: ["/og-image.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-};
+  metadataBase: new URL("https://portifolio-ecru-theta.vercel.app"),
+  title: "Maurício Alexandre Barroso — Developer",
+  description: "Portfolio of Maurício Alexandre Barroso, full-stack developer and frontend specialist.",
+}
 
-export default async function LocaleLayout({
-  params,
-  children,
-}: {
-  params: Promise<{ locale: Locale }>;
-  children: ReactElement;
+export default async function LocaleLayout({ children, params }: {
+  children: React.ReactNode
+  params: Promise<{ locale: string }>
 }) {
-  const { locale } = await params;
+  const { locale } = await params
+  if (!LOCALES.includes(locale as Locale)) notFound()
 
   return (
     <html lang={locale}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <nav className="p-4 fixed z-10">
-          <LocaleSwitcher currentLocale={locale} />
-        </nav>
-        {children}
-      </body>
+      <body className={`${display.variable} ${body.variable}`}>{children}</body>
     </html>
-  );
+  )
 }
